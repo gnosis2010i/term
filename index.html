@@ -1,0 +1,17 @@
+<BODY>
+    <article id="term" />
+
+    <script>
+        fetch('https://947yusm0xl.microcms.io/api/v1/term',
+            { headers: { "X-MICROCMS-API-KEY": "WSdlWvyruq7Hiavb1lzPEFESXS9LUJIKU0PK" } })
+            .then((res) => {
+                return res.json();
+            })
+            .then((json) => {
+                document.getElementById("term").innerHTML = json.body;
+            })
+            .catch((reason) => {
+                console.log(reason);
+            });
+    </script>
+</BODY>
